@@ -11,6 +11,9 @@ h1 {
   margin: 0 0 30px 0;
   color: #333;
 }
+html {
+  zoom: 80%; /* or transform: scale(0.8); */
+}
 /* rows */
 .row {
   text-align: center;
@@ -29,45 +32,36 @@ h1 {
   font-weight: bold;
   font-size: 2.5em;
 }
-
 .row > div.green {
   --background: #5ac85a;
   --border-color: #5ac85a;
   animation: flip 0.5s ease forwards;
 }
-
 .row > div.grey {
   --background: #a1a1a1;
   --border-color: #a1a1a1;
-  animation: flip 0.5s ease forwards;
+  animation: flip 0.6s ease forwards;
 }
-
 .row > div.yellow {
   --background: #e2cc68;
   --border-color: #e2cc68;
   animation: flip 0.5s ease forwards;
 }
-
-.row > div:nth-child(2){
+.row > div:nth-child(2) {
   animation-delay: 0.2s;
 }
-
-.row > div:nth-child(3){
+.row > div:nth-child(3) {
   animation-delay: 0.4s;
 }
-
-.row > div:nth-child(4){
+.row > div:nth-child(4) {
   animation-delay: 0.6s;
 }
-
-.row > div:nth-child(5){
+.row > div:nth-child(5) {
   animation-delay: 0.8s;
 }
-
 .row.current > div.filled {
   animation: bounce 0.2s ease-in-out forwards;
 }
-
 .keypad {
   max-width: 500px;
   margin: 20px auto;
@@ -81,7 +75,6 @@ h1 {
   border-radius: 6px;
   line-height: 50px;
 }
-
 .keypad > div.green {
   background: #5ac85a;
   color: #fff;
@@ -121,7 +114,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* animations */
+/* keyframe animations */
 @keyframes flip {
   0% {
     transform: rotateX(0);
@@ -129,18 +122,17 @@ h1 {
     border-color: #333;
   }
   45% {
-    transform: rotateX(90DEG);
-    background: #fff;
+    transform: rotateX(90deg);
+    background: white;
     border-color: #333;
   }
-  55%{
-    transform: rotateX(90DEG);
+  55% {
+    transform: rotateX(90deg);
     background: var(--background);
     border-color: var(--border-color);
-    color: #eee;
   }
   100% {
-    transform: rotateX(0);
+    transform: rotateX(0deg);
     background: var(--background);
     border-color: var(--border-color);
     color: #eee;
@@ -148,11 +140,11 @@ h1 {
 }
 
 @keyframes bounce {
-  0% {
+  0% { 
     transform: scale(1);
     border-color: #ddd;
   }
-  50% {
+  50% { 
     transform: scale(1.2);
   }
   100% {
@@ -160,10 +152,3 @@ h1 {
     border-color: #333;
   }
 }
-
-/* 
-
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
-
-*/
