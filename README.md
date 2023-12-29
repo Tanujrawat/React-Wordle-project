@@ -1,3 +1,5 @@
+LIVE LINK : https://react-wordle-game-tr.netlify.app/ (please wait a few seconds until the data is loaded)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
